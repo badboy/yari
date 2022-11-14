@@ -109,11 +109,8 @@ export async function checkFile(filePath, options: CheckerOptions = {}) {
 
   // The image has to be mentioned in the adjacent index.html document
   const parentPath = path.dirname(filePath);
-  const htmlFilePath = path.join(parentPath, "index.html");
   const mdFilePath = path.join(parentPath, "index.md");
-  const rawContent = fs.existsSync(htmlFilePath)
-    ? fs.readFileSync(htmlFilePath, "utf-8")
-    : fs.existsSync(mdFilePath)
+  const rawContent = fs.existsSync(mdFilePath)
     ? fs.readFileSync(mdFilePath, "utf-8")
     : null;
   if (!rawContent) {
@@ -129,7 +126,7 @@ export async function checkFile(filePath, options: CheckerOptions = {}) {
   // Yes, this is pretty easy to fake if you really wanted to, but why
   // bother?
   if (!rawContent.includes(path.basename(filePath))) {
-    throw new Error(`${filePath} is not mentioned in ${htmlFilePath}`);
+    throw new Error(`${filePath} is not mentioned in ${mdFilePath}`);
   }
 
   const tempdir = tempy.directory();

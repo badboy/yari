@@ -11,11 +11,7 @@ describe("Document.findAll()", () => {
 
   it("all files should be either index.html or index.md", () => {
     const filePaths = [...Document.findAll().iter({ pathOnly: true })];
-    expect(
-      filePaths.every(
-        (value) => value.endsWith("index.html") || value.endsWith("index.md")
-      )
-    ).toBeTruthy();
+    expect(filePaths.every((value) => value.endsWith("index.md"))).toBeTruthy();
   });
 
   it("searching by specific file", () => {
