@@ -10,6 +10,11 @@ tags:
   - Layout
   - Learn
 ---
+
+## Examples
+
+### Grid 1
+
 ```css hidden
     * {box-sizing: border-box;}
 
@@ -40,6 +45,8 @@ tags:
     <div class="box6">Six</div>
 </div>
 ```
+
+### Grid 2
 
 ```css hidden
     * {box-sizing: border-box;}

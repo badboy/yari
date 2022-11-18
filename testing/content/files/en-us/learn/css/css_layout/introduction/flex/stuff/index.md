@@ -13,7 +13,7 @@ tags:
 
 ## Examples
 
-### Flexbox Example 1
+### Flex 1
 
 ```css hidden
 * {box-sizing: border-box;}
@@ -40,7 +40,7 @@ tags:
 </div>
 ```
 
-### Flexbox Example 2
+### Flex 2
 
 ```css hidden
     * {box-sizing: border-box;}

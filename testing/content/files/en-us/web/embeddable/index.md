@@ -25,29 +25,7 @@ This `EmbedLiveSample` refers to a `id` attribute.
 
 ---
 
-```html hidden
-   
-  <meter id="fuel"
-       min="0" max="100"
-       low="33" high="66" optimum="80"
-       value="50">
-    at 50/100
-  </meter>
-
-```
-
-```css hidden
-    meter {
-      margin: 20px;
-    }
-
-```
-
-This `EmbedLiveSample` refers to a `name` attribute.
-
-{{ EmbedLiveSample('Meter', '100%', '70') }}
-
----
+## Keyboard
 
 ```html hidden
    
