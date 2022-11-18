@@ -9,7 +9,7 @@ describe("Document.findAll()", () => {
     expect(filePaths.every((value) => fs.existsSync(value))).toBeTruthy();
   });
 
-  it("all files should be either index.html or index.md", () => {
+  it("all files should be index.md", () => {
     const filePaths = [...Document.findAll().iter({ pathOnly: true })];
     expect(filePaths.every((value) => value.endsWith("index.md"))).toBeTruthy();
   });
